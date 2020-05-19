@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\bin\Debug\LB4 Csharp.exe.config
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\bin\Debug\LB4 Csharp.exe
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\bin\Debug\LB4 Csharp.pdb
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\obj\Debug\LB4 Csharp.csprojAssemblyReference.cache
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\obj\Debug\LB4_Csharp.Form1.resources
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\obj\Debug\LB4_Csharp.Properties.Resources.resources
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\obj\Debug\LB4 Csharp.csproj.GenerateResource.cache
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\obj\Debug\LB4 Csharp.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\obj\Debug\LB4 Csharp.exe
+C:\Users\User\source\repos\LB4 Csharp\LB4 Csharp\obj\Debug\LB4 Csharp.pdb
