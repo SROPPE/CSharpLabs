@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\LB 7 CSharp\LB 7 CSharp\bin\Debug\LB 7 CSharp.exe.config
+C:\Users\User\source\repos\LB 7 CSharp\LB 7 CSharp\bin\Debug\LB 7 CSharp.exe
+C:\Users\User\source\repos\LB 7 CSharp\LB 7 CSharp\bin\Debug\LB 7 CSharp.pdb
+C:\Users\User\source\repos\LB 7 CSharp\LB 7 CSharp\obj\Debug\LB 7 CSharp.csprojAssemblyReference.cache
+C:\Users\User\source\repos\LB 7 CSharp\LB 7 CSharp\obj\Debug\LB 7 CSharp.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\LB 7 CSharp\LB 7 CSharp\obj\Debug\LB 7 CSharp.exe
+C:\Users\User\source\repos\LB 7 CSharp\LB 7 CSharp\obj\Debug\LB 7 CSharp.pdb
