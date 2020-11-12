@@ -1,7 +1,0 @@
-C:\Users\User\source\repos\LB3 C SHARP\LB3 C SHARP\bin\Debug\LB3 C SHARP.exe.config
-C:\Users\User\source\repos\LB3 C SHARP\LB3 C SHARP\bin\Debug\LB3 C SHARP.exe
-C:\Users\User\source\repos\LB3 C SHARP\LB3 C SHARP\bin\Debug\LB3 C SHARP.pdb
-C:\Users\User\source\repos\LB3 C SHARP\LB3 C SHARP\obj\Debug\LB3 C SHARP.csprojAssemblyReference.cache
-C:\Users\User\source\repos\LB3 C SHARP\LB3 C SHARP\obj\Debug\LB3 C SHARP.csproj.CoreCompileInputs.cache
-C:\Users\User\source\repos\LB3 C SHARP\LB3 C SHARP\obj\Debug\LB3 C SHARP.exe
-C:\Users\User\source\repos\LB3 C SHARP\LB3 C SHARP\obj\Debug\LB3 C SHARP.pdb
