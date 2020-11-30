@@ -6,6 +6,6 @@ namespace ETLService.Option
 {
     public class LoggerOptions
     {
-        public string Path { get; set; } = "log.txt";
+        public string Path { get; set; } = "C:\\log.txt";
     }
 }

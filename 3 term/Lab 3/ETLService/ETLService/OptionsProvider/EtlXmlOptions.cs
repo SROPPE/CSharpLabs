@@ -9,36 +9,32 @@ namespace ETLService.OptionProvider
 {
     class EtlXmlOptions : OptionsProvider
     {
-        public EtlXmlOptions(string xmlProviderPath) : base(xmlProviderPath)
+        public EtlXmlOptions(Type settingsType,string xmlProviderPath) : base(settingsType,xmlProviderPath)
         {
 
         }
         public override Option<T> GetOption<T>()
         {
-            EtlOptions options = new EtlOptions();
-            Option<T> result = new Option<T>(default);
+            Option<T> result;
 
-            XmlSerializer formatter = new XmlSerializer(typeof(EtlOptions));
-            try
+            string innerStartTag = "";
+            foreach (var field in _settingsType.GetFields())
             {
-                using (FileStream fs = new FileStream("config.xml", FileMode.OpenOrCreate))
+                if (typeof(T) == field.FieldType)
                 {
-                     options = (EtlOptions)formatter.Deserialize(fs);
+                    innerStartTag = field.Name;
                 }
             }
-            catch (Exception exc)
+
+            using (var sr = new StringReader(_optionProviderPath))
+            using (var xmlReader = XmlReader.Create(sr))
             {
-                Logger.Log(exc.Message);
+                xmlReader.ReadToDescendant(innerStartTag);
+                var xmlSerializer = new XmlSerializer(typeof(T), new XmlRootAttribute(innerStartTag));
+                result = new Option<T>((T)xmlSerializer.Deserialize(xmlReader.ReadSubtree()));
+                return result;
             }
-            foreach (var field in options.GetType().GetFields())
-            {
-                if(typeof(T) == field.GetType())
-                {
-                    
-                }
-            }
-          
-            return result;
+       
         }
     }
 }

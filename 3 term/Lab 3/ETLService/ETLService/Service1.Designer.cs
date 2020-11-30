@@ -1,6 +1,6 @@
 ﻿namespace ETLService
 {
-    partial class Service
+    partial class Service1
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

@@ -6,7 +6,8 @@ namespace Utilities
     class Logger
     {
         public static LoggerOptions options = new LoggerOptions();
-        public static bool isEnabled { get; set; }
+
+        public static bool isEnabled { get; set; } = true;
 
         public static void Log(string message)
         {
