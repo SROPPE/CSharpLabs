@@ -49,8 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EtlBuilder.cs" />
-    <Compile Include="LabEtlBuilder.cs" />
+    <Compile Include="EtlBuilder\EtlBuilder.cs" />
+    <Compile Include="EtlBuilder\LabEtlBuilder.cs" />
     <Compile Include="Option\ArchiveOptions.cs" />
     <Compile Include="ConfigurationManager.cs" />
     <Compile Include="OptionsProvider\EtlJsonOptions.cs" />
