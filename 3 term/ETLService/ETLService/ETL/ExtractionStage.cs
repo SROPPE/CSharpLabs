@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ETLService.Option;
+using System;
 using System.IO;
 using System.Threading;
 using Utilities;
@@ -7,11 +8,13 @@ namespace ETLService.Extraction
 {
     public class ExtractionStage : IExtractable
     {
-        private static string _sourceDirectory = "D:\\Source\\";
-        private static string _targetDirectory = "D:\\Target\\";
 
-        public string targetАddress => _targetDirectory;
-        public string sourceAddress => _sourceDirectory;
+        private ExtractionOptions _options;
+        public ExtractionOptions Options 
+        { 
+            get => _options; 
+            set => _options = value;
+        }
 
         public void OnCreated(object source, FileSystemEventArgs e)
         {
@@ -30,7 +33,7 @@ namespace ETLService.Extraction
 
                 var compressedFilePath = Archiver.CompressFile(new PathWrapper(newPath));
 
-                string newCompressedFilePath = _targetDirectory + Path.GetFileName(compressedFilePath);
+                string newCompressedFilePath = _options.TargetPath + Path.GetFileName(compressedFilePath);
                 File.Move(compressedFilePath, newCompressedFilePath);
 
                 string decompressedFilePath = Archiver.DecompressFile(new PathWrapper(newCompressedFilePath));
@@ -39,8 +42,7 @@ namespace ETLService.Extraction
             }
             catch(Exception exc)
             {
-                Logger logger = new Logger("C:\\logger.txt", true);
-                logger.Log(exc.Message);
+                Logger.Log(exc.Message);
             }
         }
 
@@ -101,7 +103,7 @@ namespace ETLService.Extraction
         }
         private string CreateDirectory(DateTime date)
         {
-            string td = $"{_sourceDirectory}{date:yyyy\\\\MM\\\\dd}";
+            string td = $"{_options.SourcePath}{date:yyyy\\\\MM\\\\dd}";
             if (!Directory.Exists(td))
             {
                 Directory.CreateDirectory(td);

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.IO.Compression;
-
+using ETLService.Option;
 namespace Utilities
 {
     public static class Archiver
     {
+        public static ArchiveOptions options = new ArchiveOptions();
         public static string CompressFile(PathWrapper currentFilePath)
         {
             string createdFile = null;
@@ -19,8 +20,7 @@ namespace Utilities
                     using (FileStream compressedFileStream = File.Create(
                         Path.Combine(currentFilePath.FileDirectory, currentFilePath.FileName) + ".gz"))
                     {
-                        using (GZipStream compressionStream = new GZipStream(compressedFileStream,
-                           CompressionMode.Compress))
+                        using (GZipStream compressionStream = new GZipStream(compressedFileStream, options.compressionLevel))
                         {
                             originalFileStream.CopyTo(compressionStream);
                             createdFile = compressedFileStream.Name;

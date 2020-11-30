@@ -23,7 +23,7 @@ namespace ETLService
             {
                 _watcher = new FileSystemWatcher();
 
-                _watcher.Path = _extractionStage.sourceAddress;
+                _watcher.Path = _extractionStage.Options.SourcePath;
 
                 _watcher.NotifyFilter = NotifyFilters.LastAccess
                                      | NotifyFilters.LastWrite
@@ -36,14 +36,14 @@ namespace ETLService
             }
             catch(Exception exc)
             {
-                Logger logger = new Logger("C:\\logger.txt", true);
-                logger.Log(exc.Message);
+                Logger.Log(exc.Message);
             }
         }
         public void Start()
         {
             _watcher.EnableRaisingEvents = true;
             _enabled = true;
+
             while (_enabled) Thread.Sleep(100);
         }
 
